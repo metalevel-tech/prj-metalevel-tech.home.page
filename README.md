@@ -56,6 +56,8 @@ npm i concurrently --save-dev
 }
 ```
 
+**7.**  Rearrange the project structure. Move everything from the `laravel-app/` directory to the *root* directory if the project.
+
 ## Resources and references
 
 * [ ] Laravel: [Starter Kits](https://laravel.com/docs/10.x/starter-kits#breeze-and-inertia)
