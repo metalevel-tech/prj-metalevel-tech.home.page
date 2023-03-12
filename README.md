@@ -4,23 +4,25 @@ This is a homepage template for [https://metalevel.tech](https://metalevel.tech)
 
 ## Initial deployment
 
-**1.**  Crete a new Laravel project.
+**0.** You need to have installed PHP, the necessary modules, Composer, NodeJs, etc. For reference see the [Deploy the dependencies](https://github.com/metalevel-tech/exc-laravel-react-v1#deploy-the-dependencies) section within the other Laravel+React exercise project of mine.
+
+**1.** Crete a new Laravel project.
 
 ```bash
-composer create-project laravel/laravel laravel-app
+composer create-project laravel/laravel exc-laravel-react-v2
+cd exc-laravel-react-v2
 ```
 
-**2.**  Use the SQL scripts provided within the [`assets/sql`](assets/) directory to create the database and tables. Then, update the [`.env`](laravel-app/.env) file with the database credentials.
+**2.** Use the SQL scripts provided within the [`assets/sql`](assets/) directory to create the database and tables. Then, update the [`.env`](.env) file with the database credentials.
 
-**3.**  Install the [React@Breeze](https://bootcamp.laravel.com/inertia/installation#installing-laravel-breeze) package.
+**3.** Install the [React@Breeze](https://bootcamp.laravel.com/inertia/installation#installing-laravel-breeze) package.
 
 ```bash
-cd laravel-app
 composer require laravel/breeze --dev
 php artisan breeze:install react
 ```
 
-**4.** Modify the scripts section in the [`package.json`](laravel-app/package.json) file, according to your chosen development port and host.
+**4.** Modify the scripts section in the [`package.json`](exc-laravel-react-v2/package.json) file, according to your chosen development port and host.
 
 **5.** Turn on the dev services in two separate terminal windows.
 
@@ -44,7 +46,7 @@ php artisan breeze:install react
     npm run build
     ```
 
-**6.** Install [`concurrently`](https://www.npmjs.com/package/concurrently) to run multiple commands concurrently. Then edit [`package.json`](laravel-app/package.json) and create a new script to run both the Laravel and React apps - name it `start`.
+**6.** Install [`concurrently`](https://www.npmjs.com/package/concurrently) to run multiple commands concurrently. Then edit [`package.json`](exc-laravel-react-v2/package.json) and create a new script to run both the Laravel and React apps - name it `start`.
 
 ```bash
 npm i concurrently --save-dev
@@ -56,13 +58,14 @@ npm i concurrently --save-dev
 }
 ```
 
-**7.**  Rearrange the project structure. Move everything from the `laravel-app/` directory to the *root* directory if the project.
+**7.**
 
-## Resources and references
+## Resources
 
 * [ ] Laravel: [Starter Kits](https://laravel.com/docs/10.x/starter-kits#breeze-and-inertia)
 * [ ] Laravel: [Bootcamp](https://bootcamp.laravel.com/)
 * [ ] Laravel: [Asset Bundling (**Vite**)](https://laravel.com/docs/10.x/vite)
+* [ ] Inertia: [JavaScript apps the monolith way](https://inertiajs.com/)
 
 ## References
 
